@@ -15,5 +15,7 @@ group("root") {
     "//net:net_unittests",
     "//net:quic_server",
     "//net:quic_client",
+    "//net:quic_simple_client",
+    "//net:quic_simple_server",
   ]
 }
