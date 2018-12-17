@@ -53,3 +53,6 @@ From then on you can follow the usual Chromium instructions for playing with the
 toy client and server:
 
 https://www.chromium.org/quic/playing-with-quic
+
+简易版参考：https://github.com/IFrestart/Proto-quic
+输入ninja -C out/Default/ quic_simple_server便可得到编译好的运行文件。具体运行可看client_bin.cc和server_bin.cc
