@@ -6214,8 +6214,8 @@ fuzzer_test("net_http_server_fuzzer") {
     "//base",
     "//net",
   ]
-  dict = "data/fuzzer_dictionaries/net_spdy_session_fuzzer.dict"
-  seed_corpus = "data/fuzzer_data/net_spdy_session_fuzzer/"
+  dict = "data/fuzzer_dictionaries/net_http_server_fuzzer.dict"
+  seed_corpus = "data/fuzzer_data/http_server_requests/"
 }
 
 fuzzer_test("net_spdy_session_fuzzer") {
