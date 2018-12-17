@@ -6217,6 +6217,21 @@ fuzzer_test("net_http_server_fuzzer") {
   dict = "data/fuzzer_dictionaries/net_spdy_session_fuzzer.dict"
   seed_corpus = "data/fuzzer_data/net_spdy_session_fuzzer/"
 }
+
+fuzzer_test("net_spdy_session_fuzzer") {
+  sources = [
+    "spdy/chromium/spdy_session_fuzzer.cc",
+  ]
+  deps = [
+    ":net_fuzzer_test_support",
+    ":test_support",
+    "//base",
+    "//net",
+  ]
+  dict = "data/fuzzer_dictionaries/net_spdy_session_fuzzer.dict"
+  seed_corpus = "data/fuzzer_data/net_spdy_session_fuzzer/"
+}
+
 source_set("simple_client") {
   sources = [
     "tools/test/chlo_extractor.cc",
@@ -6309,18 +6324,3 @@ source_set("simple_server") {
       "//url",
     ]
 }
-  dict = "data/fuzzer_dictionaries/net_http_server_fuzzer.dict"
-  seed_corpus = "data/fuzzer_data/http_server_requests/"
-}
-
-fuzzer_test("net_spdy_session_fuzzer") {
-  sources = [
-    "spdy/chromium/spdy_session_fuzzer.cc",
-  ]
-  deps = [
-    ":net_fuzzer_test_support",
-    ":test_support",
-    "//base",
-    "//net",
-  ]
-
