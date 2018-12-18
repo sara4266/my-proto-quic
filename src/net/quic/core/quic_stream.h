@@ -206,7 +206,8 @@ class QUIC_EXPORT_PRIVATE QuicStream : public StreamNotifierInterface {
   void OnStreamFrameRetransmitted(const QuicStreamFrame& frame) override;
   void OnStreamFrameDiscarded(const QuicStreamFrame& frame) override;
 
- protected:
+ //protected:
+ public:
   // Sends as many bytes in the first |count| buffers of |iov| to the connection
   // as the connection will consume. If FIN is consumed, the write side is
   // immediately closed.
