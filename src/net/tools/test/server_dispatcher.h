@@ -2,7 +2,6 @@
 #define NET_TOOLS_QUIC_QUIC_SIMPLE_DISPATCHER_H_
 
 #include "net/tools/test/server_dispatcher_base.h"
-#include "net/tools/test/quic_http_response_cache.h"
 #include "net/tools/test/server_session_base.h"
 
 namespace net {
